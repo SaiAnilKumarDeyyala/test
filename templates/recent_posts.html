@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="google-signin-client_id" content="833020576112-bt5foh30ohc46lj7h6sbtsf9ofqh67fs.apps.googleusercontent.com">
+	<title>Job Posting HTML Generator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+		<ul class="navbar-nav">
+		  <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+		  <li class="nav-item"><a href="/recent_posts" class="nav-link">Recent Posts</a></li>
+		  <li class="nav-item"><a href="#" class="nav-link">Post a Job</a></li>
+		</ul>
+	</nav>
+
+    <div>
+        <h1 class="ten-title" style="text-decoration: underline;">Last Ten Posts</h1>
+        <div class="posts">
+        {% for index in range(last_ten_count) %}
+          {% set post_index = last_ten_count - index - 1 %}
+          <h2>{{ index+1 }}. {{ last_ten_titles[-post_index-1] }}</h2>
+          <p>Link: <a href="{{ last_ten_links[post_index-1] }}">{{ last_ten_links[-post_index-1] }}</a></p>
+        {% endfor %}
+        </div>
+    </div>
+</body>

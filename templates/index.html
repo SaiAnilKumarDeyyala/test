@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="google-signin-client_id" content="833020576112-bt5foh30ohc46lj7h6sbtsf9ofqh67fs.apps.googleusercontent.com">
+	<title>Job Posting HTML Generator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<nav class="navbar">
+		<ul class="navbar-nav">
+		  <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+		  <li class="nav-item"><a href="/recent_posts" class="nav-link">Recent Posts</a></li>
+		  <li class="nav-item"><a href="#" class="nav-link">Post a Job</a></li>
+		</ul>
+	</nav>
+	  
+
+	<h1>TTL Job Poster</h1><br>
+	<form id="jobForm" method="POST" action="{{ url_for('post_job') }}">
+    <center> Visit <b><i>telugutechlearners.in</i></b> for Daily Job Updates</center>
+		<label for="postTitle">Post Title:</label>
+		<input type="text" id="postTitle" name="postTitle" required><br>
+
+		<label for="image">Image:</label>
+		<input type="text" id="image" name="image" required><br>
+
+		<label for="tags">Tags:</label>
+		<input type="text" id="tags" name="tags" required><br>
+
+		<label for="description">Job Description:</label><br>
+		<textarea id="description" rows="5" cols="40" name="description" required></textarea><br>
+
+		<label for="applyLink">Apply Link:</label>
+		<input type="text" id="applyLink" name="applyLink" required><br>
+
+		<label for="adsenseCode">Adsense Code:</label>
+		<input type="text" id="adsenseCode" name="adsenseCode" required><br>
+
+		<label for="company">Company:</label>
+		<input type="text" id="company" name="company"><br>
+
+		<label for="role">Role:</label>
+		<input type="text" id="role" name="role"><br>
+
+		<label for="batch">Batch:</label>
+		<input type="text" id="batch" name="batch"><br>
+
+		<label for="education">Education:</label>
+		<input type="text" id="education" name="education"><br>
+
+		<label for="salary">Salary:</label>
+		<input type="text" id="salary" name="salary"><br>
+
+		<label for="lastDate">Last Date:</label>
+		<input type="text" id="lastDate" name="lastDate"><br>
+
+		<label for="location">Location:</label>
+		<input type="text" id="location" name="location"><br> 
+
+		<input type="submit" value="Post Job Update"><br>
+    <p style="text-align:center">made with &#10084 by Sai Anil</p>
+	</form>
+</body>
+</html>
